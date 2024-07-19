@@ -1,0 +1,75 @@
+.main {
+    width: 1000px;
+    height: 540px;
+    background-color: black;
+}
+
+.row1{
+    width: 1000px;
+    height: 100px;
+    background-color: gold;
+    text-align: center;
+    color: red;
+    font-size: 50px;
+}
+
+.row2{
+    width: 100%;
+    height: 40px;
+    background-color: blue;
+}
+
+.r2cols{
+    width: 200px;
+    height: 40px;
+    float: left;
+    text-align: center;
+    color: black;
+}
+
+.row3{
+    width: 1000px;
+    height: 200px;
+    background-color: red;
+}
+
+.r3col1{
+    width: 250px;
+    height: 200px;
+    background-color: yellow;
+    float: left;
+    text-align: center;
+}
+
+.r3col2{
+    width: 750px;
+    height: 200px;
+    background-color: magenta;
+    float: left;
+
+}
+
+.r3cols{
+    width: 250px;
+    height: 40px;
+
+}
+
+.row4{
+    width: 1000px;
+    height: 50px;
+    background-color: red;
+    text-align: center;
+}
+
+.row5{
+    width: 1000px;
+    height: 100px;
+    background-color: green;
+}
+
+.r5col{
+    width: 330px;
+    height: 100px;
+    float: left;
+}
