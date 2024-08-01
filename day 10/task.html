@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .container {
+            width: 1000px;
+            height: 540px;
+            border: 2px groove black;
+            margin: auto;
+        }
+
+        .row1 {
+            width: 996px;
+            height: 71px;
+            /* 100-4-25=71 */
+
+            border: 2px solid red;
+            font-size: 30px;
+            text-align: center;
+            padding-top: 25px;
+        }
+
+        .row2 {
+            width: 1000px;
+            height: 40px;
+
+        }
+
+        .r2cols {
+            width: 196px;
+            height: 28px;
+            border: 2px solid magenta;
+            float: left;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .row3 {
+            width: 1000px;
+            height: 200px;
+
+        }
+
+        .r3col1 {
+            width: 250px;
+        
+            height: 200px;
+          
+            float: left;
+        }
+
+        .r3col2 {
+            width: 746px;
+            height: 196px;
+            border: 2px solid tan;
+            float: left;
+
+        }
+        .item{
+            width: 246px;
+            height: 26px;
+            border: 2px solid gold;
+            text-align: center;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row1">WSCube Tech</div>
+        <div class="row2">
+            <div class="r2cols">Home</div>
+            <div class="r2cols">About</div>
+            <div class="r2cols">Contact</div>
+            <div class="r2cols">Courses</div>
+            <div class="r2cols">Gallery</div>
+        </div>
+        <div class="row3">
+            <div class="r3col1">
+                <div class="item">Home</div>
+                <div class="item">About</div>
+                <div class="item">Contact</div>
+                <div class="item">Courses</div>
+                <div class="item">Gallery</div>
+            </div>
+            <div class="r3col2">img</div>
+        </div>
+
+    </div>
+</body>
+
+</html>
