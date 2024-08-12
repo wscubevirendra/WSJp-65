@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_timelapse_white_24px</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="04.-Priority-Card" transform="translate(-17.000000, -517.000000)">
+            <g id="sort_hc" transform="translate(0.000000, 340.000000)">
+                <g id="List-Copy" transform="translate(15.000000, 175.000000)">
+                    <g id="Group-2">
+                        <g id="ic_timelapse_white_24px">
+                            <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                            <path d="M16.2782168,7.76073364 C15.1360572,6.59024594 13.6424638,6 12.1391084,6 L12.1391084,12.002501 L8,16.2442684 C10.2843193,18.5852439 13.9938975,18.5852439 16.2879789,16.2442684 C18.5722981,13.903293 18.5722981,10.101709 16.2782168,7.76073364 Z M12,2 C6.48,2 2,6.48 2,12 C2,17.52 6.48,22 12,22 C17.52,22 22,17.52 22,12 C22,6.48 17.52,2 12,2 Z M12,20 C7.58,20 4,16.42 4,12 C4,7.58 7.58,4 12,4 C16.42,4 20,7.58 20,12 C20,16.42 16.42,20 12,20 Z" id="Shape" fill="#535766" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

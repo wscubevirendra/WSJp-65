@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Assistant", sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+
+    background-color: white;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .05)
+}
+
+.top-container {
+    width: 1200px;
+    height: 100%;
+    /* border: 2px solid red; */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 53px;
+    height: 36px;
+    /* border: 1px solid green; */
+    background-image: url('../images/MyntraWebSprite_27_01_2021.png');
+    background-size: 1404px 105px;
+    background-position: -462px 0;
+
+}
+
+nav {
+    width: 515px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid blue; */
+    justify-content: space-around;
+}
+
+.search{
+    width: 320px;
+    height: 40px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: 0;
+    background: #f5f5f6;
+    border: 1px solid #f5f5f6;
+    border-radius: 0 4px 4px 0;
+}
+
+.icons{
+    width: 194px;
+    height: 40px;
+    border: 2px solid hotpink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+
+}
+
+.item{
+    font-size: 14px;
+    letter-spacing: .3px;
+    color: #282c3f;
+    font-weight: 700;
+    text-transform: uppercase;
+
+
+}
+
+.search input{
+    width: 80%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: #f5f5f6;
+}
+
+.mid-section{
+    width: 100%;
+    /* height: 1000px; */
+    border: 2px solid red;
+    display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+gap: 10px;
+}
+
+.product-img{
+    width: 16%;
+    height: 200px;
+    /* border: 2px solid navy; */
+}
+
+.product-img img{
+    width: 100%;
+    height: 100%;
+}

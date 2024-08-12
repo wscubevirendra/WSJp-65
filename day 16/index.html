@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        form {
+            width: 700px;
+            height: 800px;
+            /* border: 2px solid red; */
+            margin: auto;
+            display: flex;
+            align-items: center;
+
+            padding-top: 20px;
+            flex-direction: column;
+        }
+
+        .group {
+            width: 100%;
+            font-size: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        input,
+        button,
+        select {
+            width: 80%;
+            padding: 10px;
+        }
+
+        button {
+            background-color: lightblue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="group">
+            <label for="username">Name:-</label>
+            <input id="username" required type="text" name="username" placeholder="Your Name">
+        </div>
+        <div class="group">
+            <label for="useremail">Email:-</label>
+            <input  type="email" name="useremail" placeholder="Email">
+        </div>
+        <div class="group">
+            <label>Password</label>
+            <input  autofocus name="password" type="password">
+        </div>
+        <div class="group">
+            <label>City</label>
+            <select name="city">
+                <option value="">Select</option>
+                <option value="jaipur">Jaipur</option>
+                <option value="kota">kota</option>
+                <option disabled value="jodhpur">Jodhpur</option>
+            </select>
+        </div>
+        <div class="group">
+            <label>Gender</label>
+            <input name="gender" type="checkbox">
+            <label for="">Male</label>
+            <input name="gender" type="checkbox">
+            <label>Female</label>
+            <input name="gender" type="checkbox">
+            <label>Other</label>
+        </div>
+        <div class="group">
+            <label>Address</label>
+            <textarea cols="200" name=""></textarea>
+        </div>
+        <div class="group">
+            <label>Color</label>
+            <input name="color" type="color">
+            <label for="">Age</label>
+            <input min="18" max="52" type="number">
+
+        </div>
+        <div class="group">
+            <label for="">Date</label>
+            <input type="date">
+            <label for=""></label>
+            <input type="range">
+        </div>
+        <div class="group">
+            <label for="">image</label>
+            <input type="file">
+
+        </div>
+
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 800px;
+            height: 400px;
+            border: 2px solid red;
+            margin: 50px auto;
+            position: relative;
+
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            transition: 1s;
+
+        }
+
+        .container:hover .box {
+            left: 600px;
+            top: 0px;
+       
+        }
+
+        .box:nth-child(2) {
+            top: 0;
+            left: 600px;
+            background-color: brown;
+
+        }
+
+        .container:hover .box:nth-child(2){
+            top: 200px;
+            left: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+    </div>
+</body>
+
+</html>

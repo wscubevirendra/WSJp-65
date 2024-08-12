@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .demo{
+            width: 700px;
+            height: 300px;
+            border: 2px solid red;
+            display: flex;
+            margin: auto;
+        
+        }
+        .item{
+            width: 200px;
+            height: 200px;
+            border: 2px solid green;
+        }
+
+        .item:nth-child(1){
+            background-color: red;
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+
+        .item:nth-child(2){
+            background-color: tan;
+          
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="demo">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+
+    </div>
+    
+</body>
+</html>
