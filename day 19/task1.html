@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            width: 100%;
+            height: 75px;
+            box-shadow: 0px 0px 5px gray;
+        }
+
+        .container {
+            width: 1200px;
+            height: 100%;
+            /* border: 2px solid green; */
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        nav {
+            width: 1000px;
+            height: 100%;
+            /* border: 1px solid red; */
+            display: flex;
+
+        }
+
+        .item {
+            width: 200px;
+            height: 100%;
+            text-transform: uppercase;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            /* border: 1px solid blue; */
+            text-align: center;
+            padding-top: 25px;
+        }
+
+
+
+        .mega-menu {
+            width: 100%;
+            height: 300px;
+            /* border: 2px solid red; */
+            position: absolute;
+            top: 76px;
+            left: 0px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: left;
+            padding-left: 10px;
+            opacity: 0;
+            visibility: hidden;
+            transition: 300ms;
+
+        }
+
+        .mega-menu ul {
+            list-style: none;
+            color: brown;
+
+        }
+
+        .mega-menu-section{
+            width: 200px;
+            height: 100%;
+            /* border: 2px solid green; */
+            padding: 20px;
+        }
+
+        .main-item:hover .mega-menu{
+            opacity: 1;
+            visibility: visible;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img width="85" src="logo.jpg" alt="">
+            <nav>
+                <div class="item"><a href="">men</a></div>
+                <div class="item main-item">
+                    <a href="">women</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-section">
+                            <ul>
+                               
+                                    <li>T-Shirts</li>
+                                    <li>Casual Shirts</li>
+                                    <li>Formal Shirts</li>
+                                    <li>Sweatshirts</li>
+                                    <li>Sweaters</li>
+                                    <li>Jackets</li>
+                                    <li>Blazers & Coats</li>
+                                    <li>Suits</li>
+                                    <li>Rain Jackets</li>
+                                  </ul>
+                                
+                        </div>
+                        <div class="mega-menu-section">
+                            <ul>
+                               
+                                    <li>T-Shirts</li>
+                                    <li>Casual Shirts</li>
+                                    <li>Formal Shirts</li>
+                                    <li>Sweatshirts</li>
+                                    <li>Sweaters</li>
+                                    <li>Jackets</li>
+                                    <li>Blazers & Coats</li>
+                                    <li>Suits</li>
+                                    <li>Rain Jackets</li>
+                                  </ul>
+                                
+                        </div>
+                        <div class="mega-menu-section">
+                            <ul>
+                               
+                                    <li>T-Shirts</li>
+                                    <li>Casual Shirts</li>
+                                    <li>Formal Shirts</li>
+                                    <li>Sweatshirts</li>
+                                    <li>Sweaters</li>
+                                    <li>Jackets</li>
+                                    <li>Blazers & Coats</li>
+                                    <li>Suits</li>
+                                    <li>Rain Jackets</li>
+                                  </ul>
+                                
+                        </div>
+                        <div class="mega-menu-section">
+                            <ul>
+                               
+                                    <li>T-Shirts</li>
+                                    <li>Casual Shirts</li>
+                                    <li>Formal Shirts</li>
+                                    <li>Sweatshirts</li>
+                                    <li>Sweaters</li>
+                                    <li>Jackets</li>
+                                    <li>Blazers & Coats</li>
+                                    <li>Suits</li>
+                                    <li>Rain Jackets</li>
+                                  </ul>
+                                
+                        </div>
+                        <div class="mega-menu-section">
+                            <ul>
+                               
+                                    <li>T-Shirts</li>
+                                    <li>Casual Shirts</li>
+                                    <li>Formal Shirts</li>
+                                    <li>Sweatshirts</li>
+                                    <li>Sweaters</li>
+                                    <li>Jackets</li>
+                                    <li>Blazers & Coats</li>
+                                    <li>Suits</li>
+                                    <li>Rain Jackets</li>
+                                  </ul>
+                                
+                        </div>
+                    </div>
+                </div>
+                <div class="item"><a href="">kids</a></div>
+                <div class="item"><a href="">beauty</a></div>
+                <div class="item"><a href="">studio</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam amet sed esse sint saepe eaque, non nostrum
+        exercitationem quis autem voluptas obcaecati dignissimos cum vel beatae sunt eos. Fugit, aliquam.
+        Dolores ipsam, eius porro cumque ratione laudantium deleniti molestias nisi magnam nostrum accusamus in
+        aspernatur impedit! Error iusto atque velit, soluta id iure, aliquid quaerat deserunt consequatur corporis
+        nihil? Reprehenderit?
+        Cum ut placeat eaque, error voluptate adipisci facere voluptatibus ipsam nemo omnis illo neque expedita
+        excepturi ducimus rem at beatae molestiae repellendus? Explicabo, similique dicta ex ducimus molestiae dolorum
+        quod.
+        Minima, enim nulla quasi id laborum labore obcaecati accusamus eos at commodi error ab, aut vel delectus quas
+        saepe earum molestiae similique doloribus velit cupiditate sunt doloremque ipsum! Minus, veritatis?
+        Vero aspernatur, nemo id quisquam neque odit! Earum exercitationem aliquid pariatur porro officia, architecto
+        excepturi eum repellendus enim odio nemo id. Eaque alias reiciendis doloribus eveniet voluptatem rerum, dolores
+        facilis!
+        Praesentium illum explicabo, quod deleniti tempore dicta, quis maiores, nobis vel dolores id nam totam
+        consequuntur aperiam voluptas. Natus nostrum voluptatibus odit excepturi deleniti facilis, praesentium earum ea
+        nesciunt temporibus!
+        Aliquid ducimus facere expedita totam provident laborum aperiam sint inventore facilis! Possimus rerum, dolore
+        iusto beatae odio porro enim dignissimos harum obcaecati ut excepturi quibusdam dicta at hic quis autem.
+        Autem placeat optio, perspiciatis distinctio suscipit alias reprehenderit consequatur quia doloribus. Fugiat
+        quasi atque provident accusantium neque quod deserunt blanditiis repellat, omnis facilis enim, sit totam velit,
+        unde dolorem vitae.
+        Placeat autem ex molestiae nemo ullam dolore quis quia quae fugit repellat, aliquid cumque laboriosam, dicta
+        deserunt, voluptatum repudiandae! Numquam dolores vel, modi tempore molestias est consequuntur a neque aperiam.
+        Distinctio dicta, sunt nostrum reprehenderit nobis non, obcaecati cumque ipsa laudantium in id dolorem? Cumque
+        odio molestias dolores ipsam libero natus magni velit, quia, nam corporis, eos et excepturi quisquam?
+
+
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores quia provident quasi, excepturi, consectetur
+        distinctio laudantium velit voluptates optio dignissimos non, harum commodi architecto aspernatur adipisci vero
+        vel sunt assumenda.
+        Vitae dicta fugit, suscipit impedit eaque alias ex magni natus minima! Quod iste, accusamus, pariatur rem quae
+        porro magni, exercitationem laudantium cum aspernatur repellendus suscipit iusto eum alias magnam provident.
+        Nisi corporis dicta laudantium ad amet eaque autem omnis aliquid? Nobis consequatur at mollitia dignissimos
+        saepe. Non, vitae rem quidem unde consequuntur eius, nam reprehenderit itaque animi amet dignissimos sint?
+        Quos atque nulla tenetur alias itaque facilis illo, corrupti saepe aperiam quo quia. Ratione nesciunt
+        praesentium ut cumque! Beatae quia assumenda cumque repellendus animi quasi ratione neque magnam numquam
+        aperiam?
+        Itaque, in veniam nemo dolores nisi ipsa placeat labore, illum obcaecati, aliquam consequuntur modi sequi
+        molestiae voluptatum quia debitis quasi. Nam ab inventore ex ullam cum sapiente aperiam nostrum accusantium?
+        Molestias sit officia atque sed, optio accusamus neque soluta dolores minus fugit quia ipsa? Dolorem voluptatem
+        facere eius praesentium, enim, natus necessitatibus quasi sapiente perferendis quisquam perspiciatis maxime,
+        optio animi!
+        Beatae quas earum cum consequatur at neque dignissimos consectetur nulla? Facere consequuntur eligendi
+        recusandae dolore tenetur voluptas velit repellat deleniti distinctio. Nulla facere commodi quasi. Distinctio
+        recusandae modi debitis inventore.
+        In saepe aspernatur pariatur mollitia, placeat ducimus nihil unde autem veniam, recusandae tenetur rerum itaque
+        id commodi similique. Reprehenderit necessitatibus commodi mollitia quod omnis! Temporibus maiores deserunt vero
+        tenetur at.
+        Nisi molestias aspernatur fuga laborum, praesentium consequatur dolores similique iure. Inventore dicta odio
+        culpa, animi enim corrupti voluptatibus excepturi fugiat ipsam, architecto explicabo sapiente facilis veniam
+        commodi consequatur. Ratione, odio.
+        Ut temporibus ex eligendi dignissimos, totam in impedit quia labore iure nesciunt reprehenderit omnis officiis
+        voluptatibus harum explicabo ratione corporis doloribus ad. Esse, consequatur eveniet molestiae similique
+        suscipit dignissimos eligendi.
+        Dolorum repudiandae nam aperiam voluptatum incidunt tenetur, ullam enim necessitatibus aspernatur nostrum aut
+        autem natus totam voluptatibus odit nesciunt voluptate in voluptates non et dignissimos eos reiciendis. Fugiat,
+        enim ratione?
+        Nihil corrupti aspernatur, sit illum repellendus quisquam error, qui quasi, porro eaque dolore inventore commodi
+        recusandae aliquid! Deleniti doloribus quasi atque, alias soluta molestiae esse neque saepe. Ex, odio saepe!
+        Ab impedit facere, et consequatur pariatur, beatae iure, ipsum corrupti nostrum odit cum? Illo, temporibus iste
+        similique rerum ab maiores quas animi, quidem quod deleniti ad excepturi cumque soluta inventore?
+        Aut inventore adipisci porro expedita, mollitia in. Fugiat dolore quod iure at animi, deserunt suscipit. Illo
+        eligendi sapiente ad ipsum cupiditate numquam voluptates excepturi? Explicabo, sint quibusdam. Facere, maiores
+        blanditiis.
+        Voluptatem laudantium enim reprehenderit odit accusantium ducimus aspernatur sint ea numquam earum voluptas,
+        suscipit, consequatur repellat rerum a. Error atque voluptas, repudiandae nam aspernatur officia consectetur
+        eligendi dicta magni ullam!
+        Rem error nisi voluptate blanditiis doloremque deleniti dignissimos libero ut aliquam autem hic optio illum
+        omnis, delectus minus minima, sint assumenda distinctio cum recusandae nostrum beatae sapiente qui odio!
+        Inventore!
+        Consequuntur adipisci, corrupti voluptatem cupiditate eius error delectus illo nam praesentium facere ratione
+        distinctio expedita ipsam, in consectetur itaque at sit quia voluptatibus tempora sequi molestiae ab repellendus
+        natus? Accusantium.
+        Illo nemo, consequuntur in quos blanditiis ipsa ullam cum eum rem, deserunt distinctio aliquid labore eaque
+        iusto! Dicta ad pariatur dolor, id est rem nesciunt numquam voluptatum similique, voluptatem placeat.
+        Natus eius magnam dolores a nihil laborum voluptate, ab ut dignissimos mollitia soluta itaque, corrupti
+        molestias saepe quisquam, necessitatibus vel delectus odit blanditiis consequuntur. Ab delectus nesciunt iste
+        eaque voluptatum.
+        Velit tempore quos quasi esse, fugiat provident neque earum autem, alias nulla aliquam! Hic ipsam architecto
+        aperiam fugiat temporibus similique quos nesciunt, voluptas cumque pariatur est non expedita quisquam
+        voluptatum!
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect y="0.191406" width="24" height="24" fill="url(#pattern0)"/>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_3232_9463" transform="scale(0.0111111)"/>
+</pattern>
+<image id="image0_3232_9463" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABmJLR0QA/wD/AP+gvaeTAAAC8klEQVR4nO2bu2tUQRSHv+wqURE0dlqoSxRsbETB2j9ACws1WoidoH+FlYWNZRpBQQsRfJVCsFDQJL4aIfgqXGPEIBZmTYJZi9ltfGTnnsmdOzv5fXAIZGfmnPm4mTt3bhaEEEIIIYQQIlNqwAhwD/gEzHd+3gVOdD4XgQwDz4D2MjEJNKoqMAeGgS8sL7kbM0i2iTrwHD/J3RhHy0hhRigmuRvHqii2n7mPTfSdKortZ6axiW5WUWw/M49N9M8qik0Fyw1q1pjrq7FfFlhETxhzjRv7ZYFF9HVjrhvGfquWGu6Jr8j6/BTto000cE98PpI/AzuqKTMPGrj1uteVvLOqAnOiBhzHPYw0cVu/JnAb9ySo5UIIIUTy1KsuoCLqwBZgKzDU+V0b+FVWwoGyBk6MIeAocAjYD+zi77kvAR+BN8Bj4CEwRonye2E5uetGWeO//s9Yu4FruJND69HuBWCzZ+0rSj+IHgQuAouB9XZjFjjtWf+KkbrobRR/p+kbo0S8r6UsejvwPrDGXnHFcx7BpCp6I/AysD7fOOc5lyBSFX05sLYi0SLCYVmKohdw27BYotvAVc/5ALZ9tK8wa76Q8WOyiDsq9nq7r2NMO2uBU76NJTqMI74NtXSEsYQ7M/neq+Ga8muplAngJjCFe8fZwok5AJwE9gaOX+uM9SBwnH+S4q7jz3gLHOyRpwacxf6fV9047zmvwqQu+hWwqcB8zgTmu1QgVyFSFj0H7Ck4nwHgUUDOWwXzeZOy6FHjnA4H5Jw05uxJyqL3Gee0AffXYMn5zidBTvvob8ALY9853NpuYb1Po5xEP8Hta61MGfut82mUk+gPgf1njP1W3RU9Hdi/Zew36NMoJ9E/AvuX+tWPnEQvBPa3XtFe5CQ65EYI7ny5NHISnTQSHQmJjoRER0KiIyHRkZDoSEh0JCQ6EhIdCYmOhERHQqIjIdGRkOhISHQkJDoSEh0JiY6EREdCooUQQgghhBBCCCGEEELE4DeDigmsJKVYPgAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>

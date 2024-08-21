@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    box-shadow: 0px 86px 34px rgba(0, 0, 0, 0.01), 0px 48px 29px rgba(0, 0, 0, 0.03), 0px 5px 12px rgba(0, 0, 0, 0.05), 0px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.container {
+    width: 1200px;
+    height: 100%;
+    /* border: 2px solid red; */
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.vertical-seprator {
+    width: 1px;
+    height: 20px;
+    background-color: #e0e0e0;
+    margin: 0px 32px 0px 64px;
+}
+
+nav {
+    width: 245px;
+    height: 72px;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.bus-ticket {
+    width: 104px;
+    height: 72px;
+    background-color: #d84e55;
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+    border-radius: 7px;
+
+}
+
+.bus-ticket img {
+    height: 20px;
+    filter: brightness(0) invert(1);
+    margin-bottom: 6px;
+}
+
+.train-ticket {
+    width: 104px;
+    height: 72px;
+    text-align: center;
+    padding-top: 10px;
+    color: black;
+    border-radius: 7px;
+    transition: 1s;
+    position: relative;
+    /* border: 1px solid blue; */
+}
+
+.train-ticket img {
+    height: 20px;
+    filter: grayscale(1) brightness(0);
+    margin-bottom: 6px;
+}
+
+.train-ticket:hover {
+    background-color: #f0f0f0;
+}
+
+.train-ticket:hover img {
+    filter: none;
+}
+
+.offer {
+    width: 74px;
+    padding: 1px;
+    background-color: #60b681;
+    border-radius: 8px;
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    right: -40px;
+}
