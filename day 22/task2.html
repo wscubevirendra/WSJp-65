@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .outer {
+            width: 200px;
+            height: 50px;
+            border: 1px solid black;
+            margin: 200px auto;
+
+            background-color: white;
+            position: relative;
+        }
+
+        .outer:hover .inner {
+            transform: scaleX(0);
+        }
+
+        .inner {
+            width: 100%;
+            height: 100%;
+            background-color: gold;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 1s;
+        
+
+        }
+
+        .text {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+
+        <div class="inner">
+
+        </div>
+        <div class="text">
+            Shop Collection
+        </div>
+    </div>
+
+</body>
+
+</html>
