@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            width: 1000px;
+            height: 500px;
+            border: 2px solid black;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: move 2s 4s infinite alternate;
+            /* animation-name: move;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+           animation-direction: alternate-reverse; */
+            /* 
+            normal-default 0-100,0-100
+            alternate 0-100,100-0,0-100,100-0
+            reverse 100-0,100-0
+            */
+           
+
+        }
+
+        @keyframes move {
+            0% {
+                top: 0;
+                left: 0;
+                background-color: gold;
+                border-radius: 10px;
+                transform: rotate(0deg);
+            }
+            25%{
+                top: 0;
+                left: 800px;
+                background-color: tan;
+                border-radius: 20px;
+                transform: rotate(90deg);
+
+                
+
+
+            }
+
+            50%{
+                top: 300px;
+                left: 800px;
+                background-color: navy;
+                border-radius: 30px;
+                transform: rotate(180deg);
+
+
+            }
+
+            75%{
+                top: 300px;
+                left: 0;
+                background-color: blue;
+                border-radius: 40px;
+                transform: rotate(270deg);
+
+
+            }
+            100%{
+                top: 0;
+                left: 0;
+                background-color: rgb(0, 255, 26);
+                border-radius: 50px;
+                transform: rotate(360deg);
+
+
+
+            }
+
+           
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

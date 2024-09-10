@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <style>
+        .parent{
+            width: 800px;
+            height: 500px;
+            border: 2px solid red;
+        
+        }
+
+        .box{
+            width: 100px;
+            height: 50px;
+            background-color: green;
+            margin-bottom: 50px;
+            animation: race 5s ;
+            color: white;
+            font-size: 24px;
+        }
+
+        @keyframes race{
+            from{
+                transform: translateX(0px);
+            }
+            to{
+                transform: translateX(700px);
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+<div class="box" style="animation-timing-function: linear;">linear</div>
+<div class="box" style="animation-timing-function: ease-in;">ease-in</div>
+<div class="box" style="animation-timing-function: ease-out;">ease-out</div>
+<div class="box"  style="animation-timing-function: ease-in-out;">ease-in-out</div>
+<div class="box"  style="animation-timing-function: ease;">ease</div>
+    </div>
+    
+</body>
+</html>

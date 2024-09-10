@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .main{
+            width: 100%;
+            height: 100vh;
+            background-color: #070721;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+        }
+
+        .p{
+            width: 20px;
+            height: 250px;
+            border: 1px solid white;
+            animation: animated 2s infinite linear;
+           
+        }
+        .p:nth-child(1){
+            background-color: red;
+            animation-duration: 2s;
+            animation-delay: 0.5s;
+        }
+
+        .p:nth-child(2){
+            background-color: green;
+            animation-delay: 1s;
+            animation-duration: 3s;
+
+
+        }
+
+        .p:nth-child(3){
+            background-color: gold;
+            animation-delay: 1.5s;
+            animation-duration: 4s;
+
+
+        }
+        .p:nth-child(4){
+            background-color: magenta;
+            animation-delay: 2s;
+
+        }
+
+        @keyframes animated{
+            0%,100%{
+                transform: scaleY(1);
+            }
+            50%{
+                transform: scaleY(1.5);
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="p"></div>
+        <div class="p"></div>
+        <div class="p"></div>
+        <div class="p"></div>
+     
+    </div>
+    
+</body>
+</html>
