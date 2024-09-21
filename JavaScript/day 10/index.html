@@ -1,0 +1,105 @@
+<script>
+
+    // function trafficSignal(signal) {
+    //     if (signal == "red") {
+    //         return 'stop'
+    //     } else if (signal == "green") {
+    //         return 'Go'
+    //     } else if (signal == "yellow") {
+    //         return "ready to go"
+    //     }else{
+    //         return "invalid input"
+    //     }
+    // }
+
+
+    // console.log(trafficSignal('red'))
+    // console.log(trafficSignal('green'))
+    // console.log(trafficSignal('greenss'))
+
+    //     function largestElement(nums) {
+    //         var large = nums[0]
+    //         for (d of nums) {
+    //             if (d > large) {
+    //                 large = d
+    //             }
+    //         }
+
+    //         return large
+    //     }
+
+    //    console.log( largestElement([10, 20, 30]))
+    //    console.log( largestElement([40,50,3]))
+
+
+
+    // function quadrants(x, y) {
+    //     if (x > 0 && y > 0) {
+
+    //         return "I"
+    //     } else if (x < 0 && y > 0) {
+    //         //-2<0  6>0
+    //         return "II"
+    //     } else if (x < 0 && y < 0) {
+    //         return "III"
+
+    //     } else if (x > 0 && y < 0) {
+    //         return "IV"
+
+    //     } else if (x == 0 && y != 0) {
+    //         return 'y-axis'
+    //     } else if (x != 0 && y == 0) {
+    //         return 'x-axis'
+
+    //     } else {
+    //         return "origin"
+    //     }
+
+    // }
+
+    // console.log(quadrants(6, 0))
+
+
+    // function dayFind(h) {
+    //     var result;
+    //     if (h >= 5 && h < 12) {
+    //         result = "morning"
+    //     } else if (h >= 12 && h < 17) {
+    //         result = "afternoon"
+
+    //     } else if (h >= 17 && h < 21) {
+    //         result = "evening"
+
+    //     } else if (h >= 21 && h <= 24) {
+    //         result = "night"
+    //     } else {
+    //         result = "invalid input"
+    //     }
+
+    //     return result
+    // }
+
+    // console.log(dayFind(21))
+    // console.log(dayFind(10))
+    // console.log(dayFind(15))
+    // console.log(dayFind(3))
+
+
+    function margeArray(arr1, arr2) {
+        var newArr = [];
+        for (d of arr1) {
+            newArr.push(d)
+        }
+
+        for (d of arr2) {
+            newArr.push(d)
+        }
+
+        return newArr
+
+    }
+
+    console.log(margeArray([10, 20, 30], [40, 50, 10]))
+    console.log(margeArray([10, 20, 30,'hello',true], [40, 50, 10]))
+
+</script>
