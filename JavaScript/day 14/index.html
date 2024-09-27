@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <input onkeyup="getValue(event)" type="text" id="inp">
+    <h1 id="heading"></h1>
+
+
+    <script>
+        var inp = document.getElementById("inp");
+        var heading = document.getElementById('heading');
+        var sum = 0
+
+        function getValue(event) {
+            if (event.key == "Enter") {
+                sum += inp.value
+                heading.innerText = sum
+                '<br/>'
+                inp.value = ""
+
+            }
+
+        }
+    </script>
+
+    </script>
+
+</body>
+
+</html>

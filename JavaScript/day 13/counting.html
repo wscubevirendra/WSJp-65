@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="display">0</h1>
+    <button onclick=" incHandler()">+</button>
+    <button id="decButton" disabled="true" onclick="decHandler()">-</button>
+
+
+    <script>
+        var display = document.getElementsByTagName("h1");
+        var decButton = document.getElementById("decButton");
+
+
+        var count = 0
+        //global scope
+        function incHandler() {
+            // if (count >= 10) return
+            if (count <= 10) {
+                count++
+                display[0].innerText = count
+                decButton.disabled = false
+            }
+            //true=false
+        }
+
+        function decHandler() {
+            // if (count == 0) return
+            count--
+            display[0].innerText = count
+
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .demo {
+            width: 100px;
+            height: 100px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div onclick="getValue(this)" class="demo">1</div>
+    <div onclick="getValue(this)" class="demo">2</div>
+    <div onclick="getValue(this)" class="demo">3</div>
+    <div onclick="getValue(this)" class="demo">4</div>
+    <div onclick="getValue(this)" class="demo">5</div>
+    <div onclick="getValue(this)" class="demo">6</div>
+    <div onclick="getValue(this)" class="demo">7</div>
+    <div onclick="getValue(this)" class="demo">8</div>
+    <div onclick="getValue(this)" class="demo">8</div>
+    <div onclick="getValue(this)" class="demo">8</div>
+    <div onclick="getValue(this)" class="demo">8</div>
+    <div onclick="getValue(this)" class="demo">8</div>
+    <div onclick="getValue(this)" class="demo">10</div>
+
+    <script>
+        var demo = document.getElementsByClassName('demo');
+
+        function getValue(flag) {
+            console.log(flag.innerText)
+        }
+    </script>
+
+</body>
+
+</html>

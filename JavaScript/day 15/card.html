@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .parent {
+            width: 1000px;
+            height: 80vh;
+            /* border: 2px solid red; */
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .container {
+            width: 45%;
+            height: 100%;
+            border: 4px double green;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .setbg {
+            width: 1000px;
+            height: 100px;
+            margin: auto;
+            margin-top: 20px;
+            /* border: 2px solid red; */
+        }
+
+        input[type="color"] {
+            width: 50px;
+            height: 50px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="container">
+            <input onkeyup="getValue(0)" class="inputs" placeholder="To" type="text">
+            <textarea onkeyup="getValue(1)" class="inputs" placeholder="Msg" name="" id=""></textarea>
+            <input onkeyup="getValue(2)" class="inputs" placeholder="From" type="text">
+
+
+        </div>
+        <div id="box" class="container">
+            <h3 class="outputs">To:-</h3>
+            <p class="outputs">Msg:-</p>
+            <h3 class="outputs">From:-</h3>
+        </div>
+
+    </div>
+    <div class="setbg">
+        <input onchange="bgHandler(this.value)" type="color">
+        <button onclick="inc(1)">+</button>
+        <input id="fontSizeValue" value="16" type="text">
+        <button onclick="inc(2)">-</button>
+    </div>
+    <script>
+        var inputs = document.getElementsByClassName('inputs');
+        var outputs = document.getElementsByClassName('outputs')
+        var box = document.getElementById("box");
+        var fontSizeValue = document.getElementById('fontSizeValue')
+        var count = 16;
+
+
+        function getValue(index) {
+            console.log(index)
+            outputs[index].innerText = inputs[index].value
+
+        }
+
+        function bgHandler(colorCode) {
+            box.style.backgroundColor = colorCode
+
+        }
+
+        function inc(flag) {
+
+            if (flag == 1) {
+                if (count >= 25) return
+                count++
+            } else {
+                if (count <= 16) return
+                count--
+
+            }
+
+            box.style.fontSize = count + "px"
+            fontSizeValue.value = count
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

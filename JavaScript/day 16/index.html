@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            border: 2px solid red;
+        }
+
+        .myclass {
+            background-color: red;
+            color: white;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        WSCUBE TECH
+    </div>
+    <button onclick="demo()">Add</button>
+
+    <button onclick="add()">Toggle</button>
+
+    <script>
+        var box = document.querySelector('.box')
+        function add() {
+            box.classList.toggle('myclass')
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

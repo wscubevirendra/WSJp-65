@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 1100px;
+
+            border: 2px solid green;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="container">
+
+    </ul>
+
+    <script>
+        var container = document.querySelector('.container')
+        for (var i = 1; i <= 10; i++) {
+        var imgs=`https://picsum.photos/200/300?random=${i}`
+            var divTag = document.createElement('li')
+            divTag.classList.add('box')
+            divTag.innerHTML=`<img src=${imgs}>`
+            container.appendChild(divTag)
+        }
+
+    </script>
+
+</body>
+
+</html>
