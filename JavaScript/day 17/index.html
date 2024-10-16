@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 1100px;
+            height: 200px;
+            /* border: 2px solid red; */
+            margin: 100px auto;
+            display: flex;
+            gap: 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0px 5px 10px red;
+        }
+
+        .item {
+            width: 250px;
+            height: 200px;
+            /* border: 2px solid green; */
+            flex-shrink: 0;
+            transform: translate(0px);
+            padding: 10px;
+            transition: 0.5s;
+
+
+        }
+
+        .item img {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .myarrow {
+            width: 40px;
+            height: 40px;
+            /* border: 2px solid red; */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 3px 4px 5px gray;
+            font-size: 25px;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        .myarrow:nth-child(1) {
+            right: 90px;
+            top: 340px;
+        }
+
+        .myarrow:nth-child(2) {
+            left: 100px;
+            top: 340px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">
+            <img src="img/b1.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="img/b2.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="img/b3.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="img/c1.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="img/c2.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="img/c3.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="img/c4.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="img/c4.jpg" alt="">
+        </div>
+
+
+    </div>
+    <div>
+        <div onclick="next()" class="myarrow">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+        <div onclick="prev()" class="myarrow">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+    </div>
+
+    <script>
+        var images = document.querySelectorAll('.item');
+
+        var poe = 0;
+
+        function next() {
+            console.log(images.length)
+            if (images.length - 4 <= poe) return
+            //3<=3
+            poe += 2
+            for (var i = 0; i < images.length; i++) {
+                images[i].style.transform = `translateX(-${poe * 250}px)`
+            }
+
+        }
+
+        function prev() {
+            if (poe == 0) return
+            poe -= 2
+            for (var i = 0; i < images.length; i++) {
+                images[i].style.transform = `translateX(-${poe * 250}px)`
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
