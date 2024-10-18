@@ -1,0 +1,53 @@
+@media only screen and (min-width:992px) {
+    #bars {
+        display: none;
+    }
+}
+
+
+
+
+
+@media only screen and (min-width:0px) and (max-width:992px) {
+    .top-container {
+        display: none;
+    }
+
+    nav ul {
+        width: 70%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        font-weight: 700;
+        font-size: 13px;
+        transition: 0.6s;
+    }
+
+    nav ul li {
+        padding: 10px 22px 10px 15px;
+    }
+
+    .navbar-overlay {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.4s;
+    }
+
+    .open-navbar-overlay {
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+}
