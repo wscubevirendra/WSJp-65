@@ -93,3 +93,20 @@ nav ul {
     font-size: 24px;
 }
 
+.myslider {
+    max-width: 1200px;
+    height: 400px;
+    padding: 10px;
+    border: 2px solid red;
+    margin: auto;
+}
+
+.slick-prev , .slick-next{
+    background-color: red;
+}
+
+.slick-dots li button:before{
+    background-color: red;
+    content: "";
+
+}

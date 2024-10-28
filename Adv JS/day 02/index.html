@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .my-data {
+            margin-top: 50px;
+            width: 1200px;
+            height: 1000px;
+            /* border: 2px solid red; */
+            margin: auto;
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 300px;
+            min-height: 300px;
+            box-shadow: 0px 4px 5px gray;
+            background-color: white;
+            color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            flex-direction: column;
+        }
+
+        .box img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="getData()">Clike me</button>
+    <div class="my-data">
+        <img src="" alt="">
+
+
+
+    </div>
+    <script>
+        const mydata = document.querySelector(".my-data")
+        async function getData() {
+            const start = Date.now()
+            const responce = await fetch("https://fakestoreapi.com/products")
+            const data = await responce.json()  //javaScript object notation
+            showdata(data)
+
+        }
+
+
+        function showdata(data) {
+            for (d of data) {
+                const boxes = document.createElement('div');
+                boxes.classList.add("box");
+                mydata.appendChild(boxes)
+                boxes.innerHTML += `
+                 <b>title:${d.title}</b> <br>
+                 <b>Description:${d.description}</b> <br>
+        <img src=${d.image} alt="">
+                
+                `
+            }
+        }
+    </script>
+
+</body>
+
+</html>

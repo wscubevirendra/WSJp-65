@@ -2,6 +2,30 @@
     #bars {
         display: none;
     }
+
+    .top-navbar-container {
+        width: 100%;
+        height: 80px;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: 500ms;
+    }
+
+    .stick .top-navbar-container {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .stick nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
 }
 
 
