@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            width: 700px;
+            height: 300px;
+            border: 2px solid red;
+            margin: 40px auto;
+            display: flex;
+            position: relative;
+        }
+
+        .card {
+            width: 350px;
+            height: 300px;
+            background-color: lightcoral;
+            transition: 2s;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .front {
+            background-color: red;
+        }
+
+        .main:hover .front {
+            transform: rotateY(180deg);
+        }
+
+        .main:hover .back {
+            transform: rotateY(0deg);
+        }
+
+        .back {
+            transform: rotateY(180deg);
+            background-color: green;
+        }
+
+        .front h1 {
+            transform: translateZ(100px);
+            backface-visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="front card">
+            <h1>Hello</h1>
+        </div>
+        <div class="back card">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam quidem possimus quod, sunt corporis
+            voluptatibus, quasi, ad facilis natus assumenda deleniti? Minima praesentium eveniet eaque hic aut animi
+            ducimus eos!
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>
