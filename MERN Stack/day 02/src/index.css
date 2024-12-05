@@ -1,0 +1,17 @@
+.container {
+  width: 1000px;
+  padding: 10px;
+  margin: auto;
+  border: 2px solid red;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  box-shadow: 2px 4px 5px gray;
+  background-color: white;
+}

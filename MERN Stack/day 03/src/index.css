@@ -1,0 +1,23 @@
+.container {
+  width: 1100px;
+  padding: 10px;
+  display: flex;
+ justify-content: space-between;
+ gap: 50px;
+
+}
+
+.card {
+  width: 400px;
+  height: 200px;
+  box-shadow: 0px 3px 4px gray;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+}
+
+.card button{
+  padding: 20px;
+}
