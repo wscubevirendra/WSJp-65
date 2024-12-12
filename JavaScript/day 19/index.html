@@ -39,6 +39,8 @@
             overflow: hidden;
             opacity: 0;
             transition: 1s;
+            margin-bottom: 10px;
+            text-align: justify;
         }
 
         .show {
@@ -47,35 +49,75 @@
             opacity: 1;
 
         }
+
+        .accordions>div {
+            position: relative;
+        }
+
+        i {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+        }
+        
+    .rotate-i{
+        transform: rotate(180deg);
+        transition: 0.4s;
+
+    }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <div class="accordions">
-        <button class="buttons">Section1</button>
-        <p class="content show">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur quibusdam, provident vel laborum
-            corporis illum vitae reiciendis explicabo, suscipit dolorem beatae asperiores. Perspiciatis dolor recusandae
-            sed alias, nemo aperiam.
-        </p>
-        <button class="buttons">Section2</button>
-        <p class="content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur quibusdam, provident vel laborum
-            corporis illum vitae reiciendis explicabo, suscipit dolorem beatae asperiores. Perspiciatis dolor recusandae
-            sed alias, nemo aperiam.
-        </p>
-        <button class="buttons">Section3</button>
-        <p class="content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur quibusdam, provident vel laborum
-            corporis illum vitae reiciendis explicabo, suscipit dolorem beatae asperiores. Perspiciatis dolor recusandae
-            sed alias, nemo aperiam.
-        </p>
-        <button class="buttons">Section5</button>
-        <p class="content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur quibusdam, provident vel laborum
-            corporis illum vitae reiciendis explicabo, suscipit dolorem beatae asperiores. Perspiciatis dolor recusandae
-            sed alias, nemo aperiam.
-        </p>
+        <div>
+            <button class="buttons">Section1</button>
+            <i class="fa-solid fa-arrow-down rotate-i"></i>
+            <p class="content show">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur quibusdam, provident vel
+                laborum
+                corporis illum vitae reiciendis explicabo, suscipit dolorem beatae asperiores. Perspiciatis dolor
+                recusandae
+                sed alias, nemo aperiam.
+
+            </p>
+        </div>
+        <div>
+            <button class="buttons">Section2</button>
+            <i class="fa-solid fa-arrow-down"></i>
+            <p class="content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur quibusdam, provident vel
+                laborum
+                corporis illum vitae reiciendis explicabo, suscipit dolorem beatae asperiores. Perspiciatis dolor
+                recusandae
+                sed alias, nemo aperiam.
+            </p>
+        </div>
+        <div>
+            <button class="buttons">Section3</button>
+            <i class="fa-solid fa-arrow-down"></i>
+            <p class="content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur quibusdam, provident vel
+                laborum
+                corporis illum vitae reiciendis explicabo, suscipit dolorem beatae asperiores. Perspiciatis dolor
+                recusandae
+                sed alias, nemo aperiam.
+            </p>
+        </div>
+        <div>
+            <button class="buttons">Section5</button>
+            <i class="fa-solid fa-arrow-down"></i>
+            <p class="content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur quibusdam, provident vel
+                laborum
+                corporis illum vitae reiciendis explicabo, suscipit dolorem beatae asperiores. Perspiciatis dolor
+                recusandae
+                sed alias, nemo aperiam.
+            </p>
+        </div>
 
 
     </div>
@@ -83,6 +125,7 @@
     <script>
         const buttons = document.querySelectorAll('.buttons');
         const content = document.querySelectorAll('.content');
+        const icons = document.querySelectorAll('i');
 
         buttons.forEach(
             function (button, index) {
@@ -93,7 +136,9 @@
                             function (btn, i) {
                                 if (i == index) {
                                     content[i].classList.add("show")
+                                    icons[i].classList.add("rotate-i")
                                 } else {
+                                    icons[i].classList.remove("rotate-i")
                                     content[i].classList.remove("show")
 
                                 }
