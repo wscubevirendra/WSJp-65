@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 1s;
+            border: 2px solid green;
+
+        }
+
+        .front {
+            background-color: green;
+            z-index: 1;
+
+        }
+
+        .back {
+            background-color: red;
+
+        }
+
+        .main:hover .front {
+            transform: translate(100%,100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="card  front">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, porro distinctio. A tempore asperiores
+            nihil iusto fugiat aliquid deserunt, in eum. Aperiam quos inventore totam fuga veritatis repellat tenetur
+            ullam!
+        </div>
+        <div class="card back">
+            hello
+
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<script>
+    class student {
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        getDetails() {
+            console.log(`I am ${this.name} and I am ${this.age} years old`);
+        }
+    }
+
+    const person = new student("Ayesha", 22)
+    const person2 = new student("Yogesh", 23)
+
+//Promise creat
+    const promise = new Promise(
+        (resolve, reject) => {
+            let num = 21;
+            if (num % 2 == 0) {
+                resolve("Even number")
+            } else {
+                reject("Not a even number")
+            }
+
+        }
+    )
+
+
+    //promise Hanlde
+
+    promise.then(
+        (succes) => {
+            console.log(succes)
+        }
+    ).catch(
+        (erorr) => {
+            console.log(erorr)
+        }
+    )
+
+
+
+
+</script>
