@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const categoryRouter = require('./routers/categoryRouter');
 const cors = require('cors');
+const colorRouter = require('./routers/colorRouter');
+const productRouter = require('./routers/productRouter');
 const server = express();
 server.use(cors(
     {
@@ -9,8 +11,12 @@ server.use(cors(
     }
 ));
 
+
 server.use(express.json());
+server.use(express.static("public"));
 server.use("/category", categoryRouter);
+server.use("/color", colorRouter);
+server.use("/product", productRouter);
 
 
 mongoose.connect("mongodb://localhost:27017/", {

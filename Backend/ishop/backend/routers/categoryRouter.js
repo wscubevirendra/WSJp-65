@@ -1,10 +1,15 @@
 const express = require('express');
 const categoryRouter = express.Router();
+const fileUpload = require("express-fileupload")
 const categoryController = require('../controllers/categoryController');
 
 
-categoryRouter.post("/create", (req, res) => {
-    const result = new categoryController().createCategory(req.body);
+categoryRouter.post("/create", fileUpload(
+    {
+        createParentPath: true
+    }
+), (req, res) => {
+    const result = new categoryController().create(req.body, req.files.category_image);
     result.then(
         (success) => {
             res.send(success);
@@ -20,7 +25,7 @@ categoryRouter.post("/create", (req, res) => {
 })
 
 categoryRouter.get("/:id?", (req, res) => {
-    const result = new categoryController().getCategory(req.params.id)
+    const result = new categoryController().get(req.params.id)
     result.then(
         (success) => {
             res.send(success);
@@ -40,5 +45,40 @@ categoryRouter.patch("/status/:id", (req, res) => {
     result.then((success) => res.send(success))
         .catch((error) => res.send(error))
 })
+
+categoryRouter.delete("/delete/:id", (req, res) => {
+
+    const result = new categoryController().delete(req.params.id);
+    result.then(
+        (success) => {
+            res.send(success)
+        }
+    ).catch(
+        (error) => {
+            res.send(error)
+        }
+    )
+})
+
+categoryRouter.put("/update/:id", fileUpload(
+    {
+        createParentPath: true
+    }
+), (req, res) => {
+    const result = new categoryController().update(req.params.id, req.body, req.files?.category_image);
+    result.then(
+        (success) => {
+            res.send(success);
+        }
+
+    ).catch(
+        (error) => {
+            res.send(error);
+        }
+
+    )
+
+})
+
 
 module.exports = categoryRouter;

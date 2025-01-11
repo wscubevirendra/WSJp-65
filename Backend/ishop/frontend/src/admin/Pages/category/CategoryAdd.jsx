@@ -24,12 +24,13 @@ export default function CategoryAdd() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const data = {
-      name: categoryName.current.value,
-      slug: categorySlug.current.value
-    }
+    const formData = new FormData()
+    formData.append("name", categoryName.current.value);
+    formData.append("slug", categorySlug.current.value);
+    formData.append("category_image", e.target.category_image.files[0])
 
-    axios.post(API_BASE_URL + CATEGORY + "/create", data).then(
+
+    axios.post(API_BASE_URL + CATEGORY + "/create", formData).then(
       (responce) => {
         if (responce.data.status == 1) {
           e.target.reset()
@@ -40,7 +41,7 @@ export default function CategoryAdd() {
 
     ).catch(
       (error) => {
-        console.log(error)
+        notify("internal server error", 0)
       }
 
     )
@@ -97,6 +98,7 @@ export default function CategoryAdd() {
           <div className="mb-4">
             <label className="block text-gray-700">Slug:</label>
             <input
+              readOnly
               ref={categorySlug}
               type="text"
               className="w-full px-3 py-2 border rounded-lg"
@@ -106,6 +108,7 @@ export default function CategoryAdd() {
             <label className="block text-gray-700">Image:</label>
             <input
               type="file"
+              name="category_image"
               className="w-full px-3 py-2 border rounded-lg"
             />
           </div>

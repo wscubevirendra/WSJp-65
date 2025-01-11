@@ -144,20 +144,16 @@
             "submit",
             (event) => {
                 event.preventDefault();
-                let name = event.target.uname.value;
-                let email = event.target.email.value;
-                let mobile = event.target.mobile.value;
+                const data = {
+                    name: event.target.uname.value,
+                    email: event.target.email.value,
+                    mobile: event.target.mobile.value,
+                }
+
 
                 let user = JSON.parse(localStorage.getItem("studentDetails")) ?? [];
-                user.push(
-                    {
-                        "name": name,
-                        "email": email,
-                        "mobile": mobile
-                    }
-                )
-
-                localStorage.setItem("studentDetails", JSON.stringify(user))
+                const newUser = [...user, data]
+                localStorage.setItem("studentDetails", JSON.stringify(newUser))
                 showData()
 
             }
@@ -180,7 +176,7 @@
                 }
             )
 
-            container.innerHTML=finalData
+            container.innerHTML = finalData
 
         }
 

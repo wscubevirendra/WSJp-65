@@ -10,6 +10,10 @@ import CategoryView from './admin/Pages/category/CategoryView'
 import CategoryAdd from './admin/Pages/category/CategoryAdd'
 import ProductView from './admin/Pages/product/ProductView'
 import ProductAdd from './admin/Pages/product/ProductAdd'
+import CategoryEdit from './admin/Pages/category/CategoryEdit'
+import ColorView from './admin/Pages/color/ColorView'
+import ColorAdd from './admin/Pages/color/ColorAdd'
+import ColorEdit from './admin/Pages/color/ColorEdit'
 
 export default function App() {
   const router = createBrowserRouter(
@@ -47,16 +51,34 @@ export default function App() {
             element: <CategoryView />
           },
           {
-            path:"category/add",
-            element:<CategoryAdd/>
+            path: "category/add",
+            element: <CategoryAdd />
           },
           {
-            path:"product",
-            element:<ProductView/>
+            path: "color",
+            element: <ColorView />
+
           },
           {
-            path:"product/add",
-            element:<ProductAdd/>
+            path: "color/add",
+            element: <ColorAdd />
+
+          },
+          {
+            path: "color/edit/:colorId",
+            element: <ColorEdit />
+          },
+          {
+            path: "category/edit/:categoryId",
+            element: <CategoryEdit />
+          },
+          {
+            path: "product",
+            element: <ProductView />
+          },
+          {
+            path: "product/add",
+            element: <ProductAdd />
           }
 
         ]
