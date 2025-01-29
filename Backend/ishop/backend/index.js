@@ -1,9 +1,11 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const categoryRouter = require('./routers/categoryRouter');
 const cors = require('cors');
 const colorRouter = require('./routers/colorRouter');
 const productRouter = require('./routers/productRouter');
+const adminRouter = require('./routers/adminRouter');
 const server = express();
 server.use(cors(
     {
@@ -17,9 +19,10 @@ server.use(express.static("public"));
 server.use("/category", categoryRouter);
 server.use("/color", colorRouter);
 server.use("/product", productRouter);
+server.use("/admin", adminRouter);
 
 
-mongoose.connect("mongodb://localhost:27017/", {
+mongoose.connect(process.env.MONGODB_URL, {
     dbName: "ishop"
 }).then(
     () => {

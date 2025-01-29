@@ -2,3 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+.icons{
+    color: #FF4252;
+    font-weight: bold;
+    text-align: center;
+    font-size: 45px;
+}
+
+.banner{
+    width: 100%;
+    height: 70vh;
+    background: transparent linear-gradient(67deg, #E71D3A 0%, #ECC7C1 45%, #EFCAC4 58%, #E4BDB8 70%, #42A8FE 100%) 0% 0% no-repeat padding-box;
+}

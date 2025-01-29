@@ -1,5 +1,6 @@
 const { generateUniqueImageName } = require('../helper');
 const categoryModel = require('../modules/categoryModel');
+const productModel = require('../modules/productModel');
 const { unlinkSync } = require('fs');
 
 class categoryController {
@@ -77,37 +78,73 @@ class categoryController {
     }
 
     get(id) {
-        console.log(id, "my-id")
+
         return new Promise(
             async (resolve, reject) => {
                 try {
                     let category = null;
                     if (id == null) {
                         category = await categoryModel.find();
+                        if (category) {
+                            const data = [];
+                            const promise = category.map(
+                                async (cat) => {
+                                    const productCount = await productModel.find({
+                                        categoryId: cat._id
+                                    }).countDocuments()
+
+                                    data.push(
+                                        {
+                                            ...cat.toJSON(),
+                                            productCount
+                                        }
+                                    )
+                                }
+                            )
+
+                            await Promise.all(promise)
+
+
+                            resolve(
+                                {
+                                    msg: "Category find",
+                                    status: 1,
+                                    category: data
+                                }
+                            )
+
+                        } else {
+                            reject(
+                                {
+                                    msg: "Unable to find category",
+                                    status: 0
+                                }
+                            )
+                        }
 
                     } else {
                         category = await categoryModel.findById(id);
+                        if (category) {
+                            resolve(
+                                {
+                                    msg: "Category find",
+                                    status: 1,
+                                    category: category
+                                }
+                            )
+
+                        } else {
+                            reject(
+                                {
+                                    msg: "Unable to find category",
+                                    status: 0
+                                }
+                            )
+                        }
 
                     }
-                    console.log(category)
 
-                    if (category) {
-                        resolve(
-                            {
-                                msg: "Category find",
-                                status: 1,
-                                category: category
-                            }
-                        )
 
-                    } else {
-                        reject(
-                            {
-                                msg: "Unable to find category",
-                                status: 0
-                            }
-                        )
-                    }
 
                 } catch (error) {
                     reject(

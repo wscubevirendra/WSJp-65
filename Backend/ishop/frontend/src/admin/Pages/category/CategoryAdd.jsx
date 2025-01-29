@@ -4,11 +4,15 @@ import { MdKeyboardArrowRight } from 'react-icons/md'
 import { Link } from 'react-router-dom';
 import axios from 'axios'
 import { MainContext } from '../../../Context';
+import { useSelector } from 'react-redux';
 
 export default function CategoryAdd() {
+  const admin = useSelector((state) => state.admin);
   const { notify, API_BASE_URL, CATEGORY } = useContext(MainContext)
   const categoryName = useRef();
   const categorySlug = useRef();
+
+
 
 
   const generateSlug = () => {
@@ -30,7 +34,12 @@ export default function CategoryAdd() {
     formData.append("category_image", e.target.category_image.files[0])
 
 
-    axios.post(API_BASE_URL + CATEGORY + "/create", formData).then(
+
+    axios.post(API_BASE_URL + CATEGORY + "/create", formData, {
+      headers: {
+        Authorization: admin.token
+      }
+    }).then(
       (responce) => {
         if (responce.data.status == 1) {
           e.target.reset()
@@ -41,6 +50,7 @@ export default function CategoryAdd() {
 
     ).catch(
       (error) => {
+        console.log(error, "errrrrrrrrrrrrr")
         notify("internal server error", 0)
       }
 

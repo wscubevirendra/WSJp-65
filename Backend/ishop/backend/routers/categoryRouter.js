@@ -2,27 +2,34 @@ const express = require('express');
 const categoryRouter = express.Router();
 const fileUpload = require("express-fileupload")
 const categoryController = require('../controllers/categoryController');
+const adminAuth = require('../middleware/adminAuth');
+// categoryRouter.use(adminAuth)
 
 
-categoryRouter.post("/create", fileUpload(
+categoryRouter.post("/create", [fileUpload(
     {
         createParentPath: true
     }
-), (req, res) => {
-    const result = new categoryController().create(req.body, req.files.category_image);
-    result.then(
-        (success) => {
-            res.send(success);
-        }
+),
+    adminAuth
+]
+    , (req, res) => {
 
-    ).catch(
-        (error) => {
-            res.send(error);
-        }
+        const result = new categoryController().create(req.body, req.files?.category_image);
+        result.then(
+            (success) => {
+                res.send(success);
+            }
 
-    )
+        ).catch(
+            (error) => {
+                console.log(error)
+                res.send(error);
+            }
 
-})
+        )
+
+    })
 
 categoryRouter.get("/:id?", (req, res) => {
     const result = new categoryController().get(req.params.id)

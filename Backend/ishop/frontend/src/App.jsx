@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './website/Pages/Layout'
 import Home from './website/Pages/Home'
@@ -14,8 +14,22 @@ import CategoryEdit from './admin/Pages/category/CategoryEdit'
 import ColorView from './admin/Pages/color/ColorView'
 import ColorAdd from './admin/Pages/color/ColorAdd'
 import ColorEdit from './admin/Pages/color/ColorEdit'
+import MultipleImages from './admin/Pages/product/MultipleImages'
+import AdminLogin from './admin/Pages/AdminLogin'
+import { useDispatch } from 'react-redux'
+import { lsToCart } from './redux/reducers/cartSlice'
+import Cart from './website/Pages/Cart'
 
 export default function App() {
+  const dispatched = useDispatch()
+
+  useEffect(
+    () => {
+      dispatched(lsToCart())
+    },
+    []
+  )
+
   const router = createBrowserRouter(
     [
       //Website Routes
@@ -32,8 +46,12 @@ export default function App() {
             element: <Profile />
           },
           {
-            path: '/store',
+            path: '/store/:categorySlug?',
             element: <Store />
+          },
+          {
+            path: "cart",
+            element: <Cart />
           }
         ]
       },
@@ -79,9 +97,17 @@ export default function App() {
           {
             path: "product/add",
             element: <ProductAdd />
+          },
+          {
+            path: "product/multiple-image/:productId",
+            element: <MultipleImages />
           }
 
         ]
+      },
+      {
+        path: "/admin/login",
+        element: <AdminLogin />
       }
     ]
   )
