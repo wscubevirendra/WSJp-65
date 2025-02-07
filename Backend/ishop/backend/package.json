@@ -15,6 +15,7 @@
     "express": "^4.21.2",
     "express-fileupload": "^1.5.1",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.9.2"
+    "mongoose": "^8.9.2",
+    "razorpay": "^2.9.5"
   }
 }

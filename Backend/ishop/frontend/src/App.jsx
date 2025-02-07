@@ -19,6 +19,11 @@ import AdminLogin from './admin/Pages/AdminLogin'
 import { useDispatch } from 'react-redux'
 import { lsToCart } from './redux/reducers/cartSlice'
 import Cart from './website/Pages/Cart'
+import Register from './website/Pages/Register'
+import Login from './website/Pages/Login'
+import { lsToUser } from './redux/reducers/userSlice'
+import Checkout from './website/Pages/Checkout'
+import ThankYou from './website/Pages/ThankYou'
 
 export default function App() {
   const dispatched = useDispatch()
@@ -26,6 +31,7 @@ export default function App() {
   useEffect(
     () => {
       dispatched(lsToCart())
+      dispatched(lsToUser())
     },
     []
   )
@@ -52,8 +58,24 @@ export default function App() {
           {
             path: "cart",
             element: <Cart />
+          },
+          {
+            path: "checkout",
+            element: <Checkout />
+          },
+          {
+            path: "thankYou/:order_id",
+            element: <ThankYou />
           }
         ]
+      },
+      {
+        path: "register",
+        element: <Register />
+      },
+      {
+        path: "login",
+        element: <Login />
       },
       //Admin Routes
       {

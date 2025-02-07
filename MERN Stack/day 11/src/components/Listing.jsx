@@ -37,10 +37,11 @@ export default function Listing() {
             API = `https://dummyjson.com/products/category/${category_slug}`
 
         }
+        setLoading(true)
         axios
             .get(API)
             .then((response) => {
-                setLoading(true)
+                
                 setProduct(response.data.products);
                 SettotalPages(Math.ceil(response.data.total / limit))
             })

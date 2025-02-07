@@ -12,6 +12,8 @@ export default function Context(props) {
     const COLOR_URL = "/color"
     const PRODUCT_URL = "/product"
     const ADMIN_URL = "/admin"
+    const USER_URL = "/user"
+    const ORDER_URL = "/order"
     const [category, setCategory] = useState([]);
     const [color, setColor] = useState([]);
     const [product, setProduct] = useState([]);
@@ -54,7 +56,7 @@ export default function Context(props) {
         )
     }
 
-    function getProduct(product_id = null, limit = null, categorySlug = null, productColor = null) {
+    function getProduct(product_id = null, limit = 0, categorySlug = null, productColor = null) {
         let url = null;
         if (product_id == null) {
             url = API_BASE_URL + PRODUCT_URL
@@ -82,7 +84,7 @@ export default function Context(props) {
 
 
     return (
-        <MainContext.Provider value={{ notify, category, categoryHandler, API_BASE_URL, CATEGORY, colorHandler, COLOR_URL, color, PRODUCT_URL, getProduct, product, ADMIN_URL }}>
+        <MainContext.Provider value={{ notify, category, categoryHandler, API_BASE_URL, CATEGORY, colorHandler, COLOR_URL, color, PRODUCT_URL, getProduct, product, ADMIN_URL,USER_URL,ORDER_URL }}>
             {
                 props.children
             }

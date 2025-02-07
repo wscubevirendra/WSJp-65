@@ -2,10 +2,25 @@ import React, { useContext, useEffect } from 'react';
 import { AiOutlineHeart, AiOutlineClose, AiOutlineMinus, AiOutlinePlus, AiOutlineArrowRight } from 'react-icons/ai';
 import { MainContext } from '../../Context';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { formatPriceINR } from "../../helper"
 
 export default function Cart() {
     const { getProduct, product } = useContext(MainContext);
     const cart = useSelector((state) => state.cart)
+    const user = useSelector((state) => state.user.data)
+    const navigator = useNavigate()
+
+    function IsLogin() {
+        console.log("Hello")
+        if (user) {
+            navigator("/checkout")
+        } else {
+            navigator("/login?ref=checkout")
+
+        }
+    }
+
     useEffect(
         () => {
             getProduct(null)
@@ -13,7 +28,7 @@ export default function Cart() {
         []
     )
 
-    console.log(product)
+
     return (
         <section className="bg-white py-8 antialiased md:py-16">
             <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
@@ -27,19 +42,17 @@ export default function Cart() {
                                 (product.length != 0 && cart.data.length != 0)
                                 &&
 
-                                cart.data.map(
+                                cart?.data.map(
                                     (d, i) => {
-                                        
-                                        const prod = product.find((p) => p._id == d.productId)
-                                        console.log(prod)
 
+                                        const ProductCart = product.find((p) => p._id == d.productId)
                                         return (
-                                            <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm md:p-6">
+                                            <div key={i} className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm md:p-6">
                                                 <div className="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
                                                     <a href="#" className="shrink-0 md:order-1">
                                                         <img
                                                             className="h-20 w-20"
-                                                            src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front.svg"
+                                                            src={`http://localhost:5000/product/${ProductCart.thumbnail}`}
                                                             alt="imac image"
                                                         />
                                                     </a>
@@ -60,7 +73,7 @@ export default function Cart() {
                                                                 id="counter-input"
                                                                 className="w-10 border-0 bg-transparent text-center text-sm font-medium text-gray-900 focus:outline-none focus:ring-0"
                                                                 placeholder=""
-                                                                defaultValue={2}
+                                                                defaultValue={d.qty}
                                                                 required=""
                                                             />
                                                             <button
@@ -73,7 +86,10 @@ export default function Cart() {
                                                         </div>
                                                         <div className="text-end md:order-4 md:w-32">
                                                             <p className="text-base font-bold text-gray-900">
-                                                                $1,499
+                                                                {
+                                                                    formatPriceINR(ProductCart.finalPrice * d.qty)
+                                                                }
+
                                                             </p>
                                                         </div>
                                                     </div>
@@ -82,21 +98,13 @@ export default function Cart() {
                                                             href="#"
                                                             className="text-base font-medium text-gray-900 hover:underline"
                                                         >
-                                                            PC system All in One APPLE iMac (2023) mqrq3ro/a, Apple M3,
-                                                            24" Retina 4.5K, 8GB, SSD 256GB, 10-core GPU, Keyboard layout
-                                                            INT
+                                                            {ProductCart.name}
                                                         </a>
                                                         <div className="flex items-center gap-4">
+
                                                             <button
                                                                 type="button"
-                                                                className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-900 hover:underline"
-                                                            >
-                                                                <AiOutlineHeart className="me-1.5" />
-                                                                Add to Favorites
-                                                            </button>
-                                                            <button
-                                                                type="button"
-                                                                className="inline-flex items-center text-sm font-medium text-red-600 hover:underline"
+                                                                className="inline-flex  items-center text-sm font-medium text-red-600 hover:underline"
                                                             >
                                                                 <AiOutlineClose className="me-1.5" />
                                                                 Remove
@@ -125,7 +133,10 @@ export default function Cart() {
                                             Original price
                                         </dt>
                                         <dd className="text-base font-medium text-gray-900">
-                                            $7,592.00
+                                            {
+                                                formatPriceINR(cart.original_total)
+                                            }
+
                                         </dd>
                                     </dl>
                                     <dl className="flex items-center justify-between gap-4">
@@ -133,54 +144,29 @@ export default function Cart() {
                                             Savings
                                         </dt>
                                         <dd className="text-base font-medium text-green-600">
-                                            -$299.00
+                                            -{formatPriceINR(cart.original_total - cart.total)}
                                         </dd>
                                     </dl>
-                                    <dl className="flex items-center justify-between gap-4">
-                                        <dt className="text-base font-normal text-gray-500">
-                                            Store Pickup
-                                        </dt>
-                                        <dd className="text-base font-medium text-gray-900">
-                                            $99
-                                        </dd>
-                                    </dl>
-                                    <dl className="flex items-center justify-between gap-4">
-                                        <dt className="text-base font-normal text-gray-500">
-                                            Tax
-                                        </dt>
-                                        <dd className="text-base font-medium text-gray-900">
-                                            $799
-                                        </dd>
-                                    </dl>
+
                                 </div>
                                 <dl className="flex items-center justify-between gap-4 border-t border-gray-200 pt-2">
                                     <dt className="text-base font-bold text-gray-900">
                                         Total
                                     </dt>
                                     <dd className="text-base font-bold text-gray-900">
-                                        $8,191.00
+                                        {formatPriceINR(cart.total)}
                                     </dd>
                                 </dl>
                             </div>
-                            <a
-                                href="#"
-                                className="flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300"
+
+                            <button
+                                onClick={IsLogin}
+                                className="text-white my-10 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                             >
                                 Proceed to Checkout
-                            </a>
-                            <div className="flex items-center justify-center gap-2">
-                                <span className="text-sm font-normal text-gray-500">
-                                    or
-                                </span>
-                                <a
-                                    href="#"
-                                    title=""
-                                    className="inline-flex items-center gap-2 text-sm font-medium text-primary-700 underline hover:no-underline"
-                                >
-                                    Continue Shopping
-                                    <AiOutlineArrowRight className="h-5 w-5" />
-                                </a>
-                            </div>
+                            </button>
+
+
                         </div>
                     </div>
                 </div>

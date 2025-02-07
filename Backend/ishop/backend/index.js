@@ -6,6 +6,8 @@ const cors = require('cors');
 const colorRouter = require('./routers/colorRouter');
 const productRouter = require('./routers/productRouter');
 const adminRouter = require('./routers/adminRouter');
+const userRouter = require('./routers/userRouter');
+const orderRouter = require('./routers/orderRouter');
 const server = express();
 server.use(cors(
     {
@@ -20,6 +22,8 @@ server.use("/category", categoryRouter);
 server.use("/color", colorRouter);
 server.use("/product", productRouter);
 server.use("/admin", adminRouter);
+server.use("/user", userRouter);
+server.use("/order", orderRouter);
 
 
 mongoose.connect(process.env.MONGODB_URL, {

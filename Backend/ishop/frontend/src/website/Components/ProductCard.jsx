@@ -1,9 +1,27 @@
-import React from "react";
-import { useDispatch } from "react-redux";
+import React, { useContext } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/reducers/cartSlice";
+import axios from "axios";
+import { MainContext } from "../../Context";
 
 const ProductCard = ({ product }) => {
+  const { API_BASE_URL, USER_URL } = useContext(MainContext)
+  const user = useSelector((state) => state.user)
+  console.log(user)
   const dispatcher = useDispatch()
+
+  function addCartButton(productData) {
+    if (user != null) {
+      axios.post(API_BASE_URL + USER_URL + "/add-to-cart", {
+        userId: user.data._id,
+        productId: productData.productId
+      })
+
+    }
+    dispatcher(addToCart(productData))
+
+
+  }
 
   return (
     <div className="max-w-sm rounded h-[370px] overflow-hidden shadow-lg border border-gray-200 bg-white">
@@ -36,11 +54,11 @@ const ProductCard = ({ product }) => {
           }
 
         </ul>
-        <button onClick={() => dispatcher(addToCart({
+        <button onClick={() => addCartButton({
           productId: product._id,
           finalPrice: product.finalPrice,
           originalPrice: product.originalPrice
-        }))} className="w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition duration-300">
+        })} className="w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition duration-300">
           Add to Cart
         </button>
       </div>
